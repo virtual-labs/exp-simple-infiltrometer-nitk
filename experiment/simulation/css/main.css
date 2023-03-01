@@ -1,1 +1,561 @@
-/* You CSS goes in here */
+html {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#simscreen {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 600px;
+  width: 800px;
+  border: solid 1px;
+  background-color: white;
+}
+
+#title {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  background-color: black;
+  font-family: verdana;
+  color: White;
+  text-transform: uppercase;
+}
+.cont-1 {
+  left: 30px;
+  height: 90px;
+  margin-top: 50px;
+}
+
+#title h3 {
+  padding-top: 2px;
+  margin: 0px;
+}
+
+.simsubscreen {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  height: 530px;
+  width: 745px;
+}
+
+.incanvas {
+  margin: 5px 0 0 5px;
+  padding: 0;
+}
+
+#nextButton {
+  position: absolute;
+  left: 750px;
+  top: 530px;
+  cursor: pointer;
+}
+
+.circlebg {
+  border-radius: 100%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: #000;
+}
+
+.steptext {
+  display: inline;
+  font-size: 14px;
+}
+
+#copyright {
+  position: absolute;
+  left: 60px;
+  top: 580px;
+  font-size: 12px;
+}
+#alertId {
+  color: red;
+  font-family: verdana;
+  font-size: 12px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  font-family: verdana;
+  font-size: 14px;
+}
+
+.tooltip .tooltiptext {
+  font-family: verdana;
+  font-size: 14px;
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* input[type="text"]:focus */
+/* { */
+/* background-color: #f4f6f7 ; */
+/* } */
+.inputStyle {
+  border: none;
+  border-bottom: 1px solid;
+  width: 55px;
+  font-family: verdana;
+  font-size: 14px;
+  text-align: center;
+}
+.resultStyle {
+  border: none;
+  border-bottom-style: double;
+  width: 55px;
+  font-family: verdana;
+  font-size: 14px;
+  text-align: center;
+}
+#question-div {
+  position: absolute;
+  border: ridge 3px lightgrey;
+  background-color: lightgrey;
+  /* background-image: linear-gradient(grey, lightgrey, black); */
+  /* filter: alpha(opacity=55); */
+  color: black;
+  /* border-radius:15px; */
+  visibility: hidden;
+  padding: 10px;
+}
+#alertId {
+  visibility: hidden;
+}
+#alertId1 {
+  visibility: hidden;
+}
+#alertId1 {
+  color: red;
+  font-family: verdana;
+  font-size: 12px;
+}
+#alertId2 {
+  visibility: hidden;
+}
+#alertId2 {
+  visibility: hidden;
+}
+#alertId2 {
+  color: red;
+  font-family: verdana;
+  font-size: 12px;
+}
+#alertId3 {
+  visibility: hidden;
+}
+#alertId3 {
+  visibility: hidden;
+}
+#alertId3 {
+  color: red;
+  font-family: verdana;
+  font-size: 12px;
+}
+#alert_id{
+  visibility: hidden;
+}
+#alert_id{
+  color: red;
+  font-family: verdana;
+  font-size: 12px;
+}
+
+@keyframes moveCan {
+  from {
+    left: 558;
+    top: 100px;
+  }
+  to {
+    left: 300px;
+    top: 300px;
+  }
+}
+@-webkit-keyframes moveCan {
+  from {
+    left: 558;
+    top: 100px;
+  }
+  to {
+    left: 300px;
+    top: 300px;
+  }
+}
+@keyframes fix_plate {
+  from {
+    left: 518;
+    top: 100px;
+  }
+  to {
+    left: 260px;
+    top: 220px;
+  }
+}
+@-webkit-keyframes fix_plate {
+  from {
+    left: 518;
+    top: 100px;
+  }
+  to {
+    left: 260px;
+    top: 220px;
+  }
+}
+@keyframes hammer {
+  from {
+    left: 333px;
+    top: 210px;
+  }
+  to {
+    left: 333px;
+    top: 240px;
+  }
+}
+@-webkit-keyframes hammer {
+  from {
+    left: 333px;
+    top: 210px;
+  }
+  to {
+    left: 333px;
+    top: 210px;
+  }
+}
+@keyframes hit {
+  0% {
+    left: 300px;
+    top: 320px;
+  }
+  100% {
+    left: 300px;
+    top: 325px;
+  }
+}
+@-webkit-keyframes hit {
+  0% {
+    left: 300;
+    top: 320px;
+  }
+  100% {
+    left: 300px;
+    top: 325px;
+  }
+}
+@keyframes blade_hit {
+  0% {
+    left: 243px;
+    top: 273px;
+  }
+  100% {
+    left: 243px;
+    top: 278px;
+  }
+}
+@-webkit-keyframes blade_hit {
+  0% {
+    left: 243px;
+    top: 273px;
+  }
+  100% {
+    left: 243px;
+    top: 278px;
+  }
+}
+@keyframes plateRemove {
+  0% {
+    left: 243;
+    top: 270px;
+  }
+  100% {
+    left: 500px;
+    top: 100px;
+  }
+}
+@keyframes moveCan_30 {
+  from {
+    left: 558;
+    top: 100px;
+  }
+  to {
+    left: 280px;
+    top: 300px;
+  }
+}
+@-webkit-keyframes moveCan_30 {
+  from {
+    left: 558;
+    top: 100px;
+  }
+  to {
+    left: 280px;
+    top: 300px;
+  }
+}
+@keyframes fix_plate30 {
+  from {
+    left: 518;
+    top: 100px;
+  }
+  to {
+    left: 260px;
+    top: 220px;
+  }
+}
+@-webkit-keyframes fix_plate30 {
+  from {
+    left: 518;
+    top: 100px;
+  }
+  to {
+    left: 260px;
+    top: 220px;
+  }
+}
+@keyframes hammer30 {
+  from {
+    left: 382;
+    top: 134px;
+  }
+  to {
+    left: 355px;
+    top: 215px;
+  }
+}
+@-webkit-keyframes hammer30 {
+  from {
+    left: 382;
+    top: 134px;
+  }
+  to {
+    left: 355px;
+    top: 215px;
+  }
+}
+@keyframes hit30 {
+  from {
+    left: 254;
+    top: 260px;
+  }
+  to {
+    left: 254px;
+    top: 270px;
+  }
+}
+@-webkit-keyframes hit30 {
+  from {
+    left: 254;
+    top: 260px;
+  }
+  to {
+    left: 254px;
+    top: 260px;
+  }
+}
+@keyframes blade_hit30 {
+  from {
+    left: 300;
+    top: 320px;
+  }
+  to {
+    left: 300px;
+    top: 330px;
+  }
+}
+@-webkit-keyframes blade_hit30 {
+  from {
+    left: 300px;
+    top: 320px;
+  }
+  to {
+    left: 300px;
+    top: 330px;
+  }
+}
+@keyframes moveSupport {
+  0% {
+    left: 520px;
+    top: 59px;
+  }
+  60% {
+    left: 492px;
+    top: 140;
+  }
+  100% {
+    left: 492px;
+    top: 310px;
+  }
+}
+@-webkit-keyframes moveSupport {
+  0% {
+    left: 520px;
+    top: 59px;
+  }
+  60% {
+    left: 492px;
+    top: 140;
+  }
+  100% {
+    left: 492px;
+    top: 310px;
+  }
+}
+@keyframes movetube {
+  0% {
+    left: 489px;
+    top: 329px;
+  }
+  50% {
+    left: 300px;
+    top: 200px;
+  }
+  100% {
+    left: 300px;
+    top: 330px;
+  }
+}
+@keyframes moveBucket {
+  0% {
+    left: 598px;
+    top: 40px;
+  }
+  100% {
+    left: 400px;
+    top: 130px;
+  }
+}
+@keyframes fillWater {
+  0% {
+    left: 312px;
+    top: 388px;
+  }
+  100% {
+    left: 312px;
+    top: 365px;
+  }
+}
+@keyframes stopwatch {
+  to {
+    transform: rotate(410deg);
+  }
+}
+@keyframes waterDecrease {
+  0% {
+    left: 316px;
+    top: 366px;
+  }
+  100% {
+    left: 312px;
+    top: 400px;
+  }
+}
+#can2-6{
+  transform: rotate(331deg);
+}
+#can5-3 {
+  transform-origin: bottom right;
+}
+#can5c {
+	transform-origin: bottom right;
+  }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  position: absolute;
+  left: 150px;
+  margin-top: 10px;
+  width:500px;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+  width: 250px;
+}
+
+
+@keyframes fillingWater {
+  0% {
+    left: 271px;
+    top: 388px;
+  }
+  100% {
+    left: 271px;
+    top: 339px;
+  }
+}
+@keyframes water_Decrease{
+  0% {
+    left: 273px;
+    top: 339px;
+  }
+  100% {
+    left: 270px;
+    top: 375px;
+  }
+}
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+.icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.icon i {
+  display: none;
+}
+
+.icon i.fa-check {
+  display: inline;
+  color: green;
+}
+
+.icon i.fa-times {
+  display: inline;
+  color: red;
+}
+
+.input-table {
+  width: 100px;
+}
+
+.visible {
+  display: block;
+}
+#inputError{
+  margin-left: 8px;
+  white-space: nowrap;
+}
+.results-added{
+  width: 200px;
+}
+#input_Error{
+  margin-left: 8px;
+  white-space: nowrap;
+}
