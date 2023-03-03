@@ -17,6 +17,7 @@ let indx=0;//Second Table
 let attempt = 0; // Initialize the attempt counter
 let indexx=0;
 let indexxx=0;
+let valuesEntered=0;
 
 let tableData = [  [2, 100, 92, 8,],
 [3, 100, 93, 7,],
@@ -77,7 +78,7 @@ function addRow() {
 	index++;
 
 	 if (index < tableData.length) {
-	  setTimeout(addRow, 1000);
+	  setTimeout(addRow, 750);
 	}
 }
 
@@ -116,7 +117,7 @@ function addSecondTable() {
 	}
 	
 }
-let valuesEntered=0;
+
 
 function checkInputs() {
 	let inputBoxes = document.querySelectorAll('#secondTableBody input');
@@ -147,32 +148,48 @@ function checkInputs() {
 	  if (value === expectedValue) {
 		inputBox.style.color = "green";
 		inputBox.style.textAlign = 'center';
+		if (attempt === 0) {
+			setTimeout(() => {
+				inputBox.style.color = "black";
+			}, 4000);
+		}
+	
 	  } else {
 		inputBox.style.color = "red";
 		inputBox.style.textAlign = 'center';
-  
+		if (attempt === 0) {
+			setTimeout(() => {
+				inputBox.style.color = "black";
+			}, 4000);
+		}
+		
 	  }
 	}
 	console.log('Checked input boxes');
   
 	// After the second attempt, allow the user to correct any incorrect answers
 	if (attempt === 1) {
-	  console.log('Second attempt!');
-	  let inputBoxes = document.querySelectorAll('#secondTableBody input');
-	  for (let i = 0; i < inputBoxes.length; i++) {
-		let inputBox = inputBoxes[i];
-		let row = inputBox.parentNode.parentNode;
-		let rowIndex = row.rowIndex-2;
-		let colIndex = inputBox.parentNode.cellIndex;
-		let value = parseFloat(inputBox.value);
-		let expectedValue = secondTableData[rowIndex][colIndex-4];
-		if (value !== expectedValue) {
-		  inputBox.disabled = false;
-		  console.log(`Enabled input box at row ${rowIndex}, column ${colIndex}`);
+		console.log('Second attempt!');
+		let inputBoxes = document.querySelectorAll('#secondTableBody input');
+		let checkButton = document.getElementById('checkButton');
+		let resultsButton = document.getElementById('resultBtn');
+		checkButton.style.display = 'none';
+		resultsButton.style.visibility = 'visible';
+		console.log('Results button displayed!');
+		for (let i = 0; i < inputBoxes.length; i++) {
+		  let inputBox = inputBoxes[i];
+		  let row = inputBox.parentNode.parentNode;
+		  let rowIndex = row.rowIndex-2;
+		  let colIndex = inputBox.parentNode.cellIndex;
+		  let value = parseFloat(inputBox.value);
+		  let expectedValue = secondTableData[rowIndex][colIndex-4];
+		  if (value !== expectedValue) {
+			inputBox.disabled = false;
+			console.log(`Enabled input box at row ${rowIndex}, column ${colIndex}`);
+		  }
 		}
-  
-	  }
 	}
+	  
 	// Increment the attempt counter
 	attempt++;
 	console.log(`Attempt: ${attempt}`);
@@ -184,6 +201,27 @@ function checkInputs() {
 	  resultsButton.style.visibility = 'visible';
 	  console.log('Results button displayed!');
 	}
+	// Check if all answers are correct and hide the Check button if attempt is 0
+    let correctBoxes = Array.from(inputBoxes).filter((inputBox) => {
+        let row = inputBox.parentNode.parentNode;
+        let rowIndex = row.rowIndex-2;
+        let colIndex = inputBox.parentNode.cellIndex;
+        let value = parseFloat(inputBox.value);
+        let expectedValue = secondTableData[rowIndex][colIndex-4];
+        return value === expectedValue;
+		
+    });
+  
+    if ((attempt === 0 && correctBoxes.length === inputBoxes.length) || (attempt > 0 && correctBoxes.length === inputBoxes.length)) {
+        let checkButton = document.getElementById('checkButton');
+        checkButton.style.display = 'none';
+		document.getElementById("iv").style.visibility="visible"
+		document.getElementById("itv").style.visibility="visible"
+		document.getElementById("ivi").style.visibility="visible"
+		document.getElementById("itvi").style.visibility="visible"
+		
+    }
+
   }
   
 
@@ -191,7 +229,7 @@ function checkInputs() {
 
 function showResults() {
 	let table = document.getElementById('mySecondTable');
-  	table.style.width = '85%';
+  	table.style.width = '93%';
 	table.style.height ='280px';
 	let tableBody = document.getElementById('secondTableBody');
 	let rows = tableBody.getElementsByTagName('tr');
@@ -224,6 +262,10 @@ function showResults() {
 			}
 		  }
 		  tr.classList.add(addedClass); // Add the class to the modified row
+		  document.getElementById("iv").style.visibility="visible"
+		  document.getElementById("itv").style.visibility="visible"
+		  document.getElementById("ivi").style.visibility="visible"
+		  document.getElementById("itvi").style.visibility="visible"
 		}
 	}
 	
@@ -245,7 +287,7 @@ function addRows() {
 	indexx++;
   
 	 if (indexx < thirdTableData.length) {
-	  setTimeout(addRows, 1000);
+	  setTimeout(addRows, 500);
 	}
 }
 function addFourthTable() {
@@ -278,7 +320,7 @@ function addFourthTable() {
 	indexxx++;
   
 	if (indexxx < fourthTableData.length) {
-	  setTimeout(addFourthTable, 100);
+	  setTimeout(addFourthTable);
 	}
 	
 	console.log("Adding row " + indexxx + " to fourth table");
@@ -288,7 +330,7 @@ function checkValues() {
 	let inputBoxes = document.querySelectorAll('#fourthTableBody input');
 	let spanElement = document.getElementById('input_Error');
 	console.log(`Found ${inputBoxes.length} input boxes`);
-
+  
 	// Check if any input boxes have no value entered
 	let emptyBoxes = Array.from(inputBoxes).filter((inputBox) => !inputBox.value.trim());
 	if (emptyBoxes.length > 0) {
@@ -302,6 +344,7 @@ function checkValues() {
 	} else {
 	  spanElement.textContent = '';
 	}
+  
 	for (let i = 0; i < inputBoxes.length; i++) {
 	  let inputBox = inputBoxes[i];
 	  let row = inputBox.parentNode.parentNode;
@@ -312,45 +355,86 @@ function checkValues() {
 	  if (value === expectedValue) {
 		inputBox.style.color = "green";
 		inputBox.style.textAlign = 'center';
+		if (attempt === 0) {
+			setTimeout(() => {
+				inputBox.style.color = "black";
+			}, 4000);
+		}
+	
 	  } else {
 		inputBox.style.color = "red";
 		inputBox.style.textAlign = 'center';
+		if (attempt === 0) {
+			setTimeout(() => {
+				inputBox.style.color = "black";
+			}, 4000);
+		}
 		
 	  }
 	}
-
+	console.log('Checked input boxes');
+  
 	// After the second attempt, allow the user to correct any incorrect answers
 	if (attempt === 1) {
 		console.log('Second attempt!');
 		let inputBoxes = document.querySelectorAll('#fourthTableBody input');
+		let checkButton = document.getElementById('checkBtn');
+		let resultsButton = document.getElementById('resultButton');
+		checkButton.style.display = 'none';
+		resultsButton.style.visibility = 'visible';
+		console.log('Results button displayed!');
 		for (let i = 0; i < inputBoxes.length; i++) {
 		  let inputBox = inputBoxes[i];
 		  let row = inputBox.parentNode.parentNode;
 		  let rowIndex = row.rowIndex-2;
 		  let colIndex = inputBox.parentNode.cellIndex;
 		  let value = parseFloat(inputBox.value);
-		  let expectedValue = fourthTableData[rowIndex][colIndex-4];
+		  let expectedValue = secondTableData[rowIndex][colIndex-4];
 		  if (value !== expectedValue) {
 			inputBox.disabled = false;
 			console.log(`Enabled input box at row ${rowIndex}, column ${colIndex}`);
 		  }
-		  
 		}
 	}
+	  
 	// Increment the attempt counter
-	attempt++; 
+	attempt++;
+	console.log(`Attempt: ${attempt}`);
+  
 	// After the third attempt, show the results button
 	if (attempt === 2) {
-		console.log('Third attempt!');
-		let resultsButton = document.getElementById('resultButton');
-		resultsButton.style.visibility = 'visible';
-		console.log('Results button displayed!');
+	  console.log('Third attempt!');
+	  let resultsButton = document.getElementById('resultButton');
+	  resultsButton.style.visibility = 'visible';
+	  console.log('Results button displayed!');
 	}
+	// Check if all answers are correct and hide the Check button if attempt is 0
+    let correctBoxes = Array.from(inputBoxes).filter((inputBox) => {
+        let row = inputBox.parentNode.parentNode;
+        let rowIndex = row.rowIndex-2;
+        let colIndex = inputBox.parentNode.cellIndex;
+        let value = parseFloat(inputBox.value);
+        let expectedValue = fourthTableData[rowIndex][colIndex-4];
+        return value === expectedValue;
+    });
+  
+    if ((attempt === 0 && correctBoxes.length === inputBoxes.length) || (attempt > 0 && correctBoxes.length === inputBoxes.length)) {
+        let checkButton = document.getElementById('checkBtn');
+        checkButton.style.display = 'none';
+		document.getElementById("ivii").style.visibility="visible"
+		document.getElementById("itvii").style.visibility="visible"
+		document.getElementById("iviii").style.visibility="visible"
+		document.getElementById("itviii").style.visibility="visible"
+		
+
+    }
+
 }
+  
 
 function results() {
 	let table = document.getElementById('myFourthTable');
-  	table.style.width = '85%';
+  	table.style.width = '93%';
 	table.style.height ='280px';
 	let tableBody = document.getElementById('fourthTableBody');
 	let rows = tableBody.getElementsByTagName('tr');
@@ -383,6 +467,10 @@ function results() {
 		  }
 		}
 		tr.classList.add(addedClass); // Add the class to the modified row
+		document.getElementById("ivii").style.visibility="visible"
+		document.getElementById("itvii").style.visibility="visible"
+		document.getElementById("iviii").style.visibility="visible"
+		document.getElementById("itviii").style.visibility="visible"
 	  }
 	}
   }
@@ -758,7 +846,7 @@ else if(simsubscreennum==2)
 									{
 										document.getElementById("nextButton").style.visibility="visible"
 									},1000)
-								},1000);
+								},1400);
 								
 							}
 					},1500)
@@ -824,7 +912,7 @@ else if(simsubscreennum==2)
 			document.getElementById("can4-4").style.visibility="visible"
 			document.getElementById("can4-1").style.visibility="visible"
 				myInt = setInterval(function(){ animatearrow(); }, 500);
-				document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:560px; top:140px; height: 30px; z-index: 10;";
+				document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:565px; top:140px; height: 30px; z-index: 10;";
 				document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 				// Code for IE9
 				document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
@@ -843,7 +931,7 @@ else if(simsubscreennum==2)
 							setTimeout(function(){
 								document.getElementById("can4-2").style.visibility="hidden"
 								var q1 = Object.create(questions);																								
-								generateQuestion1(q1,"Why water level in both rings should be equal to minimize: ","","Lateral Flow","Longitudinal Flow",1,screen4Proceed,300,80,300,150);
+								generateQuestion1(q1,"Larger size infiltrometer give less infiltration rates than that of smaller ones: ","","False","True",2,screen4Proceed,280,130,280,150);
 								
 								
 							},1500);
@@ -874,7 +962,7 @@ else if(simsubscreennum==2)
 							setTimeout(function(){
 								document.getElementById("can4b").style.visibility="hidden"
 								var q1 = Object.create(questions);																								
-								generateQuestion1(q1,"Why water level in both rings should be equal to minimize: ","","Lateral Flow","Longitudinal Flow",1,screen4Proceed,300,80,300,150);
+								generateQuestion1(q1,"Larger size infiltrometer give less infiltration rates than that of smaller ones: ","","False","True",2,screen4Proceed,280,130,280,150);
 								
 								
 							},1500);
@@ -890,71 +978,22 @@ else if(simsubscreennum==2)
 	else if(simsubscreennum==5)
 	{
 		if(ring==15){
+			var q2 = Object.create(questions);																								
+			generateQuestion1(q2,"The diameter of the ring used in the experiment is: ","","15cm","30cm",1,screen5Proceed,250,80,300,150);
 			document.getElementById("can4-3").style.visibility="hidden"
 			document.getElementById("can4-4").style.visibility="hidden"
-			document.getElementById("can5-1").style.visibility="visible"
-			document.getElementById("can5-2").style.visibility="visible"
-			document.getElementById("can5-3").style.visibility="visible"
 			document.getElementById("can5-5").style.visibility="visible"
 			document.getElementById("can5-6").style.visibility="visible"
-			myInt = setInterval(function(){ animatearrow(); }, 500);
-			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
-			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
-			// Code for IE9
-			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
-			// Standard syntax
-			document.getElementById("arrow1").style.transform = "rotate(180deg)";
-			document.getElementById("can5-2").onclick=function(){
-				myStopFunction();
-				document.getElementById("can5-1").style.visibility="hidden"
-				document.getElementById("can5-2").style.visibility="hidden"
-				document.getElementById("can5-4").style.visibility="visible"
-				document.getElementById("can5-3").style.animation="stopwatch 35s linear infinite"
-				document.getElementById("myTable").style.visibility="visible"
-				setTimeout(function(){
-					document.getElementById("can5-5").style.animation="waterDecrease 2s forwards"
-					
-					addRow();
-				
-					setTimeout(function(){
-						document.getElementById("nextButton").style.visibility="visible"
-					},1500);
-				},2500);
-				
-			}
 					
 				
 		}else if(ring==30){
+			var q2 = Object.create(questions);																								
+			generateQuestion1(q2,"The diameter of the ring used in the experiment is: ","","15cm","30cm",2,screen5Proceed,250,80,300,150);
 			document.getElementById("can4c").style.visibility="hidden"
 			document.getElementById("can4d").style.visibility="hidden"
-			document.getElementById("can5a").style.visibility="visible"
-			document.getElementById("can5b").style.visibility="visible"
-			document.getElementById("can5c").style.visibility="visible"
 			document.getElementById("can5e").style.visibility="visible"
 			document.getElementById("can5f").style.visibility="visible"
-			myInt = setInterval(function(){ animatearrow(); }, 500);
-			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
-			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
-			// Code for IE9
-			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
-			// Standard syntax
-			document.getElementById("arrow1").style.transform = "rotate(180deg)";
-			document.getElementById("can5b").onclick=function(){
-				myStopFunction();
-				document.getElementById("can5a").style.visibility="hidden"
-				document.getElementById("can5b").style.visibility="hidden"
-				document.getElementById("can5d").style.visibility="visible"
-				document.getElementById("can5c").style.animation="stopwatch 35s linear infinite"
-				setTimeout(function(){
-					document.getElementById("can5e").style.animation="water_Decrease 2s forwards"
-					document.getElementById("myThirdTable").style.visibility="visible"
-					addRows();
-					setTimeout(function(){
-						document.getElementById("nextButton").style.visibility="visible"
-					},1500);
-				},1500);
-				
-			}
+			
 		}
 			
 			
@@ -963,6 +1002,7 @@ else if(simsubscreennum==2)
 			if(ring==15){
 				document.getElementById("can5-5").style.visibility="hidden"
 				document.getElementById("can5-6").style.visibility="hidden"
+				document.getElementById("can5-7").style.visibility="hidden"
 				document.getElementById("myTable").style.visibility="hidden"
 				document.getElementById("mySecondTable").style.visibility="visible"
 				document.getElementById("can5-4").style.visibility="hidden"
@@ -972,15 +1012,13 @@ else if(simsubscreennum==2)
 				document.getElementById("can2-1").style.visibility="hidden"
 				addSecondTable();
 				document.getElementById("checkButton").style.visibility="visible"
-				document.getElementById("iv").style.visibility="visible"
-				document.getElementById("itv").style.visibility="visible"
-				document.getElementById("ivi").style.visibility="visible"
-				document.getElementById("itvi").style.visibility="visible"
+				
 				
 				
 			}else if(ring==30){
 				document.getElementById("can5e").style.visibility="hidden"
 				document.getElementById("can5f").style.visibility="hidden"
+				document.getElementById("can5g").style.visibility="hidden"
 				document.getElementById("myThirdTable").style.visibility="hidden"
 				document.getElementById("myFourthTable").style.visibility="visible"
 				document.getElementById("can5d").style.visibility="hidden"
@@ -990,10 +1028,7 @@ else if(simsubscreennum==2)
 				document.getElementById("can2-1").style.visibility="hidden"
 				addFourthTable();
 				document.getElementById("checkBtn").style.visibility="visible"
-				document.getElementById("ivii").style.visibility="visible"
-				document.getElementById("itvii").style.visibility="visible"
-				document.getElementById("iviii").style.visibility="visible"
-				document.getElementById("itviii").style.visibility="visible"
+				
 			}
 		}
 
@@ -1007,6 +1042,73 @@ function screen4Proceed()
 	
 	
 }	
+function screen5Proceed()
+{ 
+	if(ring==15){
+		document.getElementById("can5-1").style.visibility="visible"
+		document.getElementById("can5-2").style.visibility="visible"
+		document.getElementById("can5-3").style.visibility="visible"
+		myInt = setInterval(function(){ animatearrow(); }, 500);
+			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
+			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+			// Code for IE9
+			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+			// Standard syntax
+			document.getElementById("arrow1").style.transform = "rotate(180deg)";
+			document.getElementById("can5-2").onclick=function(){
+				myStopFunction();
+				document.getElementById("can5-1").style.visibility="hidden"
+				document.getElementById("can5-2").style.visibility="hidden"
+				document.getElementById("can5-4").style.visibility="visible"
+				document.getElementById("can5-3").style.animation="stopwatch 8s linear"
+				document.getElementById("myTable").style.visibility="visible"
+				setTimeout(function(){
+					document.getElementById("can5-5").style.animation="waterDecrease 2s forwards"
+					addRow();
+					setTimeout(function(){
+						document.getElementById("can5-4").style.visibility="hidden"
+						document.getElementById("can5-3").style.visibility="hidden"
+						document.getElementById("can5-7").style.visibility="visible"
+						document.getElementById("nextButton").style.visibility="visible"
+					},5000);
+				
+				},2000);
+			
+				
+			}	
+	}else if(ring==30){
+			document.getElementById("can5a").style.visibility="visible"
+			document.getElementById("can5b").style.visibility="visible"
+			document.getElementById("can5c").style.visibility="visible"
+			myInt = setInterval(function(){ animatearrow(); }, 500);
+			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
+			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+			// Code for IE9
+			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+			// Standard syntax
+			document.getElementById("arrow1").style.transform = "rotate(180deg)";
+			document.getElementById("can5b").onclick=function(){
+				myStopFunction();
+				document.getElementById("can5a").style.visibility="hidden"
+				document.getElementById("can5b").style.visibility="hidden"
+				document.getElementById("can5d").style.visibility="visible"
+				document.getElementById("can5c").style.animation="stopwatch 8s linear infinite"
+				setTimeout(function(){
+					document.getElementById("can5e").style.animation="water_Decrease 2s forwards"
+					document.getElementById("myThirdTable").style.visibility="visible"
+					addRows();
+					setTimeout(function(){
+						document.getElementById("can5d").style.visibility="hidden"
+						document.getElementById("can5c").style.visibility="hidden"
+						document.getElementById("can5g").style.visibility="visible"
+						document.getElementById("nextButton").style.visibility="visible"
+					},3500);
+				},1500);
+				
+			}
+	}
+
+}
 function checkInputValid(e) {
 	e.value = e.value.match(/\d*(\.\d*)?/)[0];
 }
@@ -1107,6 +1209,7 @@ function checkResults()
 			ansId1.classList.add("resultStyle");
 			ansId1.style.color = "black";
 			ansId1.innerHTML= 1.6+"mm/min";
+			document.getElementById("inference").style.visibility="visible"
 			
 		}
 	}
@@ -1152,6 +1255,7 @@ function checkResultFinal()
 			ansId2.style.color = "black";
 			ansId2.innerHTML= 62+"mm";
 			
+			
 		}
 	}
 	
@@ -1195,6 +1299,7 @@ function checkResultFinals()
 			ansId3.classList.add("resultStyle");
 			ansId3.style.color = "black";
 			ansId3.innerHTML= 1.4+"mm/min";
+			document.getElementById("inference").style.visibility="visible"
 			
 		}
 	}

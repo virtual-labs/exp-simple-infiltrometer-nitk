@@ -422,7 +422,7 @@ html {
 @keyframes movetube {
   0% {
     left: 489px;
-    top: 329px;
+    top: 310px;
   }
   50% {
     left: 300px;
@@ -430,7 +430,7 @@ html {
   }
   100% {
     left: 300px;
-    top: 330px;
+    top: 300px;
   }
 }
 @keyframes moveBucket {
@@ -440,32 +440,32 @@ html {
   }
   100% {
     left: 400px;
-    top: 130px;
+    top: 100px;
   }
 }
 @keyframes fillWater {
   0% {
-    left: 312px;
+    left: 320px;
     top: 388px;
   }
   100% {
-    left: 312px;
-    top: 365px;
+    left: 315px;
+    top: 345px;
   }
 }
 @keyframes stopwatch {
   to {
-    transform: rotate(410deg);
+    transform: rotate(120deg);
   }
 }
 @keyframes waterDecrease {
   0% {
     left: 316px;
-    top: 366px;
+    top: 345px;
   }
   100% {
     left: 312px;
-    top: 400px;
+    top: 372px;
   }
 }
 #can2-6{
@@ -477,21 +477,23 @@ html {
 #can5c {
 	transform-origin: bottom right;
   }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  position: absolute;
-  left: 150px;
-  margin-top: 10px;
-  width:500px;
-}
-
-td,
-th {
-  border: 1px solid black;
-  text-align: center;
-  width: 250px;
-}
+  table {
+    font-family: verdana;
+    position: absolute;
+    left: 150px;
+    margin-top: 10px;
+    
+    font-size: 12px;
+    table-layout: fixed; /* set the table-layout to fixed */
+  }
+  
+  td,
+  th {
+    border: 1px solid black;
+    text-align: center;
+   
+  }
+  
 
 
 @keyframes fillingWater {
@@ -507,11 +509,11 @@ th {
 @keyframes water_Decrease{
   0% {
     left: 273px;
-    top: 339px;
+    top: 354px;
   }
   100% {
     left: 270px;
-    top: 375px;
+    top: 390px;
   }
 }
 .correct {
