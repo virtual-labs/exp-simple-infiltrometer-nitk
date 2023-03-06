@@ -2,38 +2,93 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The rate at which water enters the soil is called the",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Cumulative infiltration",
+        "b": "Infiltration rate",
+        "c": "None of the above",
+        "d": "Both a and b"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The rate at which the water enters into soil is called infiltration rate",
+        "b": "The total volume of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration.",
+        "c": "The rate at which the water enters into soil is called infiltration rate hence Infiltration rate is correct answer",
+        "d": "The rate at which the water enters into soil is called infiltration rate hence Infiltration rate is correct answer"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The maximum rate at which water can infiltrate into a soil under a given set of conditions is called",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Field capacity",
+        "b": "Infiltration capacity",
+        "c": "Accumulated infiltration",
+        "d": "Basic infiltration"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Maximum amount of water held by the soil against gravity is called field capacity. ",
+        "b": "The maximum rate at which water can infiltrate into a soil under a given set of conditions is called infiltration capacity",
+        "c": "The total depth of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration.",
+        "d": "As the infiltration process continues the rate of infiltration reduces and eventually reaches steady state is called basic infiltration"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Total depth of water infiltrated in the soil in a given time is",
+      "answers": {
+        "a": "Accumulated infiltration",
+        "b": "Infiltration capacity",
+        "c": "Initial infiltration",
+        "d": "Basic infiltration"
+      },
+      "explanations": {
+        "a": "The total depth of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration. ",
+        "b": "Maximum amount of water held by the soil against gravity is called field capacity",
+        "c": " The rate at which water enters soil is called infiltration rate. This is initial infiltration.",
+        "d": "As the infiltration process continues the rate of infiltration reduces and eventually reaches a steady state called basic infiltration."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
+
+    },
+    {
+      "question": " Unit of accumulated / cumulative infiltration is",
+      "answers": {
+        "a": "Cm",
+        "b": "Cm/hr",
+        "c": "Days",
+        "d": "Cm3"
+      },
+      "explanations": {
+        "a": "unit of accumulated / cumulative infiltration is cm ",
+        "b": "Unit of infiltration rate is cm/hr.",
+        "c": " unit of accumulated / cumulative infiltration is not days",
+        "d": "Unit of volume is  Cm3"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+
+
+    },
+    {
+      "question": " which of the flooding type infiltrometer",
+      "answers": {
+        "a": "Single ring infiltrometer",
+        "b": "Double ring infiltrometer",
+        "c": "None of the above",
+        "d": "Both a and b"
+      },
+      "explanations": {
+        "a": "single ring infiltrometer is flooding type infiltrometer ",
+        "b": "Double ring infiltrometer is flooding type infiltrometer",
+        "c": " Both single ring and double ring infiltrometers are floating type infiltrometers",
+        "d": "Both single ring and double ring infiltrometers are floating type infiltrometers"
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+
     }
   ]
 }

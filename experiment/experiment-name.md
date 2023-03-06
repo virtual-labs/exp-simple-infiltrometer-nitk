@@ -1,1 +1,1 @@
-## Experiment name
+## SINGLE RING INFILTROMETER

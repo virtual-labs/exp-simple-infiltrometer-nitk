@@ -2,38 +2,92 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Infiltration of a soil can be measured by",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Flooding type infiltrometers",
+        "b": "Rainfall simulator",
+        "c": "Hydrograph analysis",
+        "d": "All of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Infiltration of a soil can be measured by flooding type infiltrometers",
+        "b": "Infiltration of a soil can be measured by rainfall simulators",
+        "c": "Infiltration of a soil can be measured by hydrograph analysis",
+        "d": "Infiltration of a soil can be measured by flooding type infiltrometer, rainfall simulator, hydrograph analysis"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Single ring infiltrometer is also called as",
+      "answers": {
+        "a": "Tube type infiltrometer",
+        "b": "Simple infiltrometer",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Single ring infiltrometer is also called as Tube type infiltrometer",
+        "b": "Single ring infiltrometer is also called as simple infiltrometer",
+        "c": "Single ring infiltrometer is also called as both tube type or simple infiltrometer",
+        "d": "Single ring infiltrometer is also called as both tube type or simple infiltrometer"
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Unit of infiltration rate is",
+      "answers": {
+        "a": "Cm",
+        "b": "Cm/hr",
+        "c": "Days",
+        "d": "Cm3"
+      },
+      "explanations": {
+        "a": "The unit of  accumulated infiltration is cm",
+        "b": "The rate of infiltration rate is cm/hr",
+        "c": "unit of   infiltration rate is not days",
+        "d": "Unit of volume is  Cm3"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": " Chief disadvantage of flooding type of infiltrometer",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The raindrop impact is not considered",
+        "b": "Driving plate into soil disturbs soil sample",
+        "c": "Infiltration rate to some extent depends on size of infiltrometers",
+        "d": "All of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "One of the disadvantage of flooding type of infiltrometer is,  the raindrop impact is not considered",
+        "b": "One of the disadvantage of flooding type of infiltrometer is, driving plate into soil disturbs soil sample",
+        "c": "One of the disadvantage of flooding type of infiltrometer is,infiltration rate to some extent depends on size of infiltrometers",
+        "d": "All the options are major disadvantages of infiltrometer."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+
+    },
+    {
+      "question": " The infiltration capacity of soil decreases ________ as the time elapses.",
+      "answers": {
+        "a": "Linearly",
+        "b": "Elliptically",
+        "c": "Exponentially",
+        "d": "Vertically"
+      },
+      "explanations": {
+        "a": "The infiltration capacity of soil does not decrease linearly as the time elapses.",
+        "b": "The infiltration capacity of soil does not decrease elliptically as the time elapses.",
+        "c": "The infiltration capacity of soil  decreases exponentially as the time elapses.",
+        "d": "The infiltration capacity of soil does not decrease vertically as the time elapses"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
+
+
     }
   ]
 }
