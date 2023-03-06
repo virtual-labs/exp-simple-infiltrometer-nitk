@@ -978,23 +978,78 @@ else if(simsubscreennum==2)
 	else if(simsubscreennum==5)
 	{
 		if(ring==15){
-			var q2 = Object.create(questions);																								
-			generateQuestion1(q2,"The diameter of the ring used in the experiment is: ","","15cm","30cm",1,screen5Proceed,250,80,300,150);
 			document.getElementById("can4-3").style.visibility="hidden"
 			document.getElementById("can4-4").style.visibility="hidden"
 			document.getElementById("can5-5").style.visibility="visible"
 			document.getElementById("can5-6").style.visibility="visible"
+			document.getElementById("can5-1").style.visibility="visible"
+		document.getElementById("can5-2").style.visibility="visible"
+		document.getElementById("can5-3").style.visibility="visible"
+		myInt = setInterval(function(){ animatearrow(); }, 500);
+			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
+			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+			// Code for IE9
+			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+			// Standard syntax
+			document.getElementById("arrow1").style.transform = "rotate(180deg)";
+			document.getElementById("can5-2").onclick=function(){
+				myStopFunction();
+				document.getElementById("can5-1").style.visibility="hidden"
+				document.getElementById("can5-2").style.visibility="hidden"
+				document.getElementById("can5-4").style.visibility="visible"
+				document.getElementById("can5-3").style.animation="stopwatch 8s linear"
+				document.getElementById("myTable").style.visibility="visible"
+				setTimeout(function(){
+					document.getElementById("can5-5").style.animation="waterDecrease 2s forwards"
+					addRow();
+					setTimeout(function(){
+						document.getElementById("can5-4").style.visibility="hidden"
+						document.getElementById("can5-3").style.visibility="hidden"
+						document.getElementById("can5-7").style.visibility="visible"
+						document.getElementById("nextButton").style.visibility="visible"
+					},5000);
+				
+				},2000);
+			
+				
+			}	
 					
 				
 		}else if(ring==30){
-			var q2 = Object.create(questions);																								
-			generateQuestion1(q2,"The diameter of the ring used in the experiment is: ","","15cm","30cm",2,screen5Proceed,250,80,300,150);
 			document.getElementById("can4c").style.visibility="hidden"
 			document.getElementById("can4d").style.visibility="hidden"
 			document.getElementById("can5e").style.visibility="visible"
 			document.getElementById("can5f").style.visibility="visible"
-			
-		}
+			document.getElementById("can5a").style.visibility="visible"
+			document.getElementById("can5b").style.visibility="visible"
+			document.getElementById("can5c").style.visibility="visible"
+			myInt = setInterval(function(){ animatearrow(); }, 500);
+			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
+			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+			// Code for IE9
+			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+			// Standard syntax
+			document.getElementById("arrow1").style.transform = "rotate(180deg)";
+			document.getElementById("can5b").onclick=function(){
+				myStopFunction();
+				document.getElementById("can5a").style.visibility="hidden"
+				document.getElementById("can5b").style.visibility="hidden"
+				document.getElementById("can5d").style.visibility="visible"
+				document.getElementById("can5c").style.animation="stopwatch 8s linear infinite"
+				setTimeout(function(){
+					document.getElementById("can5e").style.animation="water_Decrease 2s forwards"
+					document.getElementById("myThirdTable").style.visibility="visible"
+					addRows();
+					setTimeout(function(){
+						document.getElementById("can5d").style.visibility="hidden"
+						document.getElementById("can5c").style.visibility="hidden"
+						document.getElementById("can5g").style.visibility="visible"
+						document.getElementById("nextButton").style.visibility="visible"
+					},3500);
+				},1500);
+				
+			}
+	}
 			
 			
 	}else if(simsubscreennum==6)
@@ -1042,73 +1097,7 @@ function screen4Proceed()
 	
 	
 }	
-function screen5Proceed()
-{ 
-	if(ring==15){
-		document.getElementById("can5-1").style.visibility="visible"
-		document.getElementById("can5-2").style.visibility="visible"
-		document.getElementById("can5-3").style.visibility="visible"
-		myInt = setInterval(function(){ animatearrow(); }, 500);
-			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
-			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
-			// Code for IE9
-			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
-			// Standard syntax
-			document.getElementById("arrow1").style.transform = "rotate(180deg)";
-			document.getElementById("can5-2").onclick=function(){
-				myStopFunction();
-				document.getElementById("can5-1").style.visibility="hidden"
-				document.getElementById("can5-2").style.visibility="hidden"
-				document.getElementById("can5-4").style.visibility="visible"
-				document.getElementById("can5-3").style.animation="stopwatch 8s linear"
-				document.getElementById("myTable").style.visibility="visible"
-				setTimeout(function(){
-					document.getElementById("can5-5").style.animation="waterDecrease 2s forwards"
-					addRow();
-					setTimeout(function(){
-						document.getElementById("can5-4").style.visibility="hidden"
-						document.getElementById("can5-3").style.visibility="hidden"
-						document.getElementById("can5-7").style.visibility="visible"
-						document.getElementById("nextButton").style.visibility="visible"
-					},5000);
-				
-				},2000);
-			
-				
-			}	
-	}else if(ring==30){
-			document.getElementById("can5a").style.visibility="visible"
-			document.getElementById("can5b").style.visibility="visible"
-			document.getElementById("can5c").style.visibility="visible"
-			myInt = setInterval(function(){ animatearrow(); }, 500);
-			document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:510px; top:140px; height: 30px; z-index: 10;";
-			document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
-			// Code for IE9
-			document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
-			// Standard syntax
-			document.getElementById("arrow1").style.transform = "rotate(180deg)";
-			document.getElementById("can5b").onclick=function(){
-				myStopFunction();
-				document.getElementById("can5a").style.visibility="hidden"
-				document.getElementById("can5b").style.visibility="hidden"
-				document.getElementById("can5d").style.visibility="visible"
-				document.getElementById("can5c").style.animation="stopwatch 8s linear infinite"
-				setTimeout(function(){
-					document.getElementById("can5e").style.animation="water_Decrease 2s forwards"
-					document.getElementById("myThirdTable").style.visibility="visible"
-					addRows();
-					setTimeout(function(){
-						document.getElementById("can5d").style.visibility="hidden"
-						document.getElementById("can5c").style.visibility="hidden"
-						document.getElementById("can5g").style.visibility="visible"
-						document.getElementById("nextButton").style.visibility="visible"
-					},3500);
-				},1500);
-				
-			}
-	}
 
-}
 function checkInputValid(e) {
 	e.value = e.value.match(/\d*(\.\d*)?/)[0];
 }
