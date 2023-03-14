@@ -5,7 +5,7 @@ The tube type infiltrometer is commonly called a “single-ring infiltrometer”
 Horton’s equation is a commonly used empirical equation to calculate the infiltration capacity of soil.
 
 <center>
-fp =fc + (fo-fc) e-kt.........................(1)  
+fp =fc + (fo-fc) e<sup>-kt</sup> ......................(1)  
 </center>
 Where,
 fp= the infiltration capacity at some time t(depth/time)
