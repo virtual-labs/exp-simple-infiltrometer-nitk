@@ -1,1 +1,1 @@
-To find the rate of infiltration or the rate at which water enters in soil.
+To measure the rate of infiltration or the rate at which water enters in soil.
