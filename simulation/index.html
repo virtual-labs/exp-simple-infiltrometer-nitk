@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>SOLVE</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <script>
+    var simsubscreennum = 0;
+    var temp = 0;
+
+
+  </script>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+  <div id="simscreen">
+    <div id="title">
+      <h3>SINGLE RING INFILTROMETER </h3>
+    </div>
+    <div class="simsubscreen" id="canvas0">
+      <h4 class="incanvas">Objective:</h4>
+      <p class="incanvas" style="font-size:14px;">To measure the rate of infiltration or the rate at which water enters
+        in
+        soil.</p><br />
+      <h4 class="incanvas">Apparatus used:</h4>
+      <p class="incanvas" style="font-size:14px;">Single Ring Infiltrometer(diameter of 15cm and
+        30cm ring), Hammer, Water Level Indicator, Stopwatch, etc.</p>
+      <img style="position:absolute; left:200px; top:276px; width:504px" src="images/table.png" />
+      <img style="position:absolute; left:461px; top:292px; height:90px;width:67px" title="Diameter of ring 15cm"
+        src="images/ring15.png" />
+      <img style="position:absolute; left:552px; top:294px; height:86px;width:117px" title="Diameter of ring 30cm"
+        src="images/single ring (1).png" />
+      <img style="position:absolute; left:353px; top:304px; height:100px;width:57px;transform: rotate(90deg);"
+        title="hammer" src="images/drawing4.1.png" />
+      <img style="position:absolute; left:331px; top:291px; height:49px;width:63px;" title="Stopwatch"
+        src="images/stpwatch.png" />
+      <img style="position:absolute; left:273px; top:282px; height:101px;width:27px" title="Tube"
+        src="images/tubenew.png" />
+      <img style="position:absolute; left:0px; top:170px;max-width:18%;width:100%;transform: rotateY(180deg)"
+        src="images/man.png" />
+      <br>&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
+        <span class="tooltiptext">
+          <p><strong style="color:red">Infiltrometer</strong>: is an experimental device to obtain the
+            volume of water entering into soil at various time intervals. </p>
+        </span>
+      </span>
+    </div>
+
+    <div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+      <strong class="incanvas">STEP</strong>
+      <span class="circlebg">&nbsp;1&nbsp;</span>
+      <p class="steptext">&nbsp;Select the diameter of ring for the trial.</p>
+      <form action="/action_page.php"></form>
+      <div class="cont-1">
+        <input type="radio" id="dia15" name="ring" value="diameter_15">
+        <label for="dia15">15cm Ring</label><br>
+        <img id="ring1" style="position:absolute; left:134px; top:50px; height:79px;width:56px"
+          src="images/dia 15cm (1).png" />
+      </div>
+      <div class="cont-2">
+        <input type="radio" id="dia30" name="ring" value="diameter_30">
+        <label for="dia30">30cm Ring </label><br>
+        <img id="ring2" style="position:absolute; left:125px; top:153px; height:75px;width:81px"
+          src="images/dia 30cm.png" />
+      </div>
+    </div>
+    <div class="simsubscreen" id="canvas2" style="visibility:hidden;">
+      <strong class="incanvas">STEP</strong>
+      <span class="circlebg">&nbsp;1&nbsp;</span>
+      <p class="steptext">&nbsp;Place ring and hammer the ring of the infiltrometer into the soil using driving plate.
+      </p>
+      <img id="can2-1" style="position:absolute; left:10px; top:400px; height:112px; width:690px;margin-right: 0px;"
+        src="images/grassland1.png" />
+      <img id="can2-2" style="position:absolute; left:558px; top:70px; height:150px; width:100px; visibility:hidden"
+        src="images/dia15.png" />
+      <img id="can2-3" style="position:absolute; left:300px; top:320px; height: 120px; width:80px;visibility: hidden;"
+        src="images/ring15.png" />
+      <img id="can2-4" style="position:absolute; left:528px; top:70px; width:205px; visibility: hidden;"
+        src="images/infiltrometer.png" />
+      <img id="can2-5" style="position:absolute; left:243px; top:275px; height:120px; width:200px;visibility:hidden;"
+        src="images/plate.png" />
+      <img id="can2-6" style="position:absolute; left:445px; top:140px; height:120px; width:162px;visibility:hidden;"
+        src="images/hammer.png" />
+      <img id="can2a" style="position:absolute; left:545px; top:70px; height: 150px; width:200px; visibility:hidden "
+        src="images/dia30.png" />
+      <img id="can2b" style="position:absolute; left:300px; top:320px; height: 116px; width:132px;visibility: hidden;"
+        src="images/single ring (1).png" />
+      <img id="can2c" style="position:absolute; left:518px; top:74px; width:222px; visibility: hidden;"
+        src="images/infiltrometer.png" />
+      <img id="can2d" style="position:absolute; left:254px; top:260px; height:124px; width:220px;visibility:hidden;"
+        src="images/plate.png" />
+      <img id="can2e" style="position:absolute; left:440px; top:134px; height:120px; width:200px;visibility:hidden;"
+        src="images/hammer.png" />
+    </div>
+    <div class="simsubscreen" id="canvas3" style="visibility:hidden;">
+      <strong class="incanvas">STEP</strong>
+      <span class="circlebg">&nbsp;2&nbsp;</span>
+      <p class="steptext">&nbsp;Place the water level indicator inside the ring.</p>
+      <img id="can3-1" style="position:absolute; left:300px; top:325px; height: 120px; width:80px;visibility: hidden;"
+        src="images/ring15.png" />
+      <img id="can3-2" style="position:absolute; left:525px; top:325px; height:127px;width:27px;visibility: hidden;"
+        src="images/tubenew.png" />
+      <img id="can3-3" style="position:absolute; left:506px; top:69px; height:42px; width:136px;visibility: hidden;"
+        src="images/supportHand.png" />
+      <img id="can3-4" style="position:absolute; left:489px; top:325px; height:126px; width:103px;visibility: hidden;"
+        src="images/rod+tube+hand.png" />
+      <img id="can3-5" style="position:absolute; left:300px; top:314px; height: 149px; width:88px;visibility: hidden;"
+        src="images/fixed15.png" />
+      <img id="can3c" style="position:absolute; left:525px; top:308px; height:127px;width:44px;visibility: hidden;"
+        src="images/tubenew.png" />
+      <img id="can3a" style="position:absolute; left:300px; top:330px; height: 116px; width:132px;visibility: hidden;"
+        src="images/single ring (1).png" />
+      <img id="can3b" style="position:absolute; left:506px; top:69px; height:54px; width:164px;visibility: hidden;"
+        src="images/supportHand.png" />
+      <img id="can3d" style="position:absolute; left:489px; top:307px; height:126px; width:120px;visibility: hidden;"
+        src="images/hand tube.png" />
+      <img id="can3e" style="position:absolute; left:250px; top:294px; height: 169px; width:139px;visibility: hidden;"
+        src="images/dia30cm+tube.png" />
+    </div>
+    <div class="simsubscreen" id="canvas4" style="visibility:hidden;">
+      <strong class="incanvas">STEP</strong>
+      <span class="circlebg">&nbsp;3&nbsp;</span>
+      <p class="steptext">&nbsp;Fill the water into the ring upto the marked level.</p>
+      <img id="can4-1" style="position:absolute; left:598px; top:40px; height:140px;width:91px;visibility: hidden;"
+        src="images/bucket1.0.png" />
+      <img id="can4-2" style="position:absolute; left:359px; top:233px; height:132px;width:180px;visibility: hidden;"
+        src="images/bucket(1).png" />
+      <img id="can4-3" style="position:absolute; left:320px; top:387px; height: 60px; width:68px;visibility: hidden;"
+        src="images/fillWater (2).png" />
+      <img id="can4-4" style="position:absolute; left:300px; top:314px; height: 149px; width:88px;visibility: hidden;"
+        src="images/waterRing15.png" />
+      <img id="can4a" style="position:absolute; left:598px; top:40px; height:173px;width:124px;visibility: hidden;"
+        src="images/bucket1.0.png" />
+      <img id="can4b" style="position:absolute; left:359px; top:193px; height:182px;width:145px;visibility: hidden;"
+        src="images/bucket(1).png" />
+      <img id="can4c" style="position:absolute; left:271px; top:339px;height: 62px; width:116px; visibility: hidden;"
+        src="images/fillWater (2).png" />
+      <img id="can4d" style="position:absolute; left:250px; top:294px; height: 169px; width:139px;visibility: hidden;"
+        src="images/dia30cm+ tube2.png" />
+
+    </div>
+    <div class="simsubscreen" id="canvas5" style="visibility:hidden;">
+      <strong class="incanvas">STEP</strong>
+      <span class="circlebg">&nbsp;4&nbsp;</span>
+      <p class="steptext">&nbsp;Start the stop watch and note down the water level at different intervals of time.</p>
+      <img id="can5-1" style="position:absolute; left:584px; top:45px; height: 137px; width:131px;visibility: hidden;"
+        src="images/stop watch hand (1).png" />
+      <img id="can5-2" style="position:absolute; left:594px; top:59px; height: 90px; width:93px;visibility: hidden;"
+        src="images/stpwatch (1).png" />
+      <img id="can5-7" style="position:absolute; left:594px; top:59px; height: 90px; width:93px;visibility: hidden;"
+        src="images/180stpwatch (1).png" />
+      <img id="can5-4" style="position:absolute; left:594px; top:59px; height: 90px; width:93px;visibility: hidden;"
+        src="images/stpwatch2 (1).png" />
+      <img id="can5-3" style="position:absolute; left:640px; top:80px; height: 24px;  width:4px;visibility: hidden;"
+        src="images/needle (1).png" />
+      <img id="can5-5" style="position:absolute; left:316px; top:345px; height: 60px; width:68px;visibility: hidden;"
+        src="images/fillWater (2).png" />
+      <img id="can5-6" style="position:absolute; left:300px; top:314px; height: 145px; width:88px;visibility: hidden;"
+        src="images/waterRing15.png" />
+      <img id="can5a" style="position:absolute; left:584px; top:45px; height: 137px; width:131px;visibility: hidden;"
+        src="images/stop watch hand (1).png" />
+      <img id="can5b" style="position:absolute; left:594px; top:59px; height: 90px; width:93px;visibility: hidden;"
+        src="images/stpwatch (1).png" />
+      <img id="can5g" style="position:absolute; left:594px; top:59px; height: 90px; width:93px;visibility: hidden;"
+        src="images/180stpwatch (1).png" />
+      <img id="can5d" style="position:absolute; left:594px; top:59px; height: 90px; width:93px;visibility: hidden;"
+        src="images/stpwatch2 (1).png" />
+      <img id="can5c" style="position:absolute; left:640px; top:80px; height: 24px;  width:4px;visibility: hidden;"
+        src="images/needle (1).png" />
+      <img id="can5e" style="position:absolute; left:272px; top:354px; height: 77px; width:109px;visibility: hidden;"
+        src="images/fillWater (2).png" />
+      <img id="can5f" style="position:absolute; left:250px; top:308px; height: 169px; width:139px;visibility: hidden;"
+        src="images/dia30cm+ tube2.png" />
+
+
+      <table id="myTable" style="visibility: hidden;  height:103px;width:573px;left:10px">
+        <thead>
+          <tr>
+            <th>Time difference (start time 0) (min)</th>
+            <th>Time difference (start time 0) (min)</th>
+            <th>Final Level before filling (mm)</th>
+            <th>Change in water level/infiltration (mm)</th>
+
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+      <table id="myThirdTable" style="visibility: hidden;  height:103px;width:570px;left:10px">
+        <thead>
+          <tr>
+            <th>Time difference (start time 0) (min)</th>
+            <th>Time difference (start time 0) (min)</th>
+            <th>Final Level before filling (mm)</th>
+            <th>Change in water level/infiltration (mm)</th>
+
+          </tr>
+        </thead>
+        <tbody id="tabBody">
+        </tbody>
+      </table>
+
+    </div>
+    <div class="simsubscreen" id="canvas6" style="visibility:hidden;">
+      <strong class="incanvas">STEP</strong>
+      <span class="circlebg">&nbsp;5&nbsp;</span>
+      <p class="steptext">&nbsp;Observations and Calculations.</p>
+      <table id="mySecondTable"
+        style="position:absolute; left:10px; height:280px;width:702px;padding:1px;visibility:hidden;">
+        <thead>
+          <tr>
+          <tr>
+            <th>Time difference (start time 0) △T(min)</th>
+            <th>Time difference (start time 0) (min)</th>
+            <th>Final Level before filling (mm)</th>
+            <th>Change in water level/infiltration △H(mm)</th>
+            <th>Infiltration Rate △H/△T,(mm/min)</th>
+            <th>Cumulative Infiltration (mm)</th>
+
+          </tr>
+          </tr>
+        </thead>
+        <tbody id="secondTableBody">
+        </tbody>
+
+      </table>
+      <table id="myFourthTable" style="position:absolute; left:2px; width:702px;padding:1px;visibility:hidden;">
+        <thead>
+          <tr>
+          <tr>
+            <th>Time difference (start time 0) △T(min)</th>
+            <th>Time difference (start time 0) (min)</th>
+            <th>Final Level before filling (mm)</th>
+            <th>Change in water level/infiltration △H(mm)</th>
+            <th>Infiltration Rate △H/△T,(mm/min)</th>
+            <th>Cumulative Infiltration (mm)</th>
+
+          </tr>
+          </tr>
+        </thead>
+        <tbody id="fourthTableBody">
+        </tbody>
+      </table>
+      <button id="checkButton" type="button"
+        style="position:absolute; left:540px;top:320px; width:57px;text-align:center;height:20px;font-family:verdana;font-size:12px;cursor:pointer;visibility: hidden"
+        onclick="checkInputs(); ">CHECK<span id="inputError" style="color: red;"></span>
+      </button>
+
+      <button id="resultBtn" type="button"
+        style="position:absolute; left:563px;top:320px; height:20px;width:62px;text-align:center;font-family:verdana;font-size:12px;cursor:pointer;visibility: hidden;"
+        onclick="showResults();">RESULT
+      </button>
+      <button id="checkBtn" type="button"
+        style="position:absolute; left:540px;top:320px; width:57px;font-family:verdana;font-size:12px;text-align:center;visibility: hidden"
+        onclick="checkValues();">CHECK<span id="input_Error" style="color: red;"></span>
+      </button>
+      <button id="resultButton" type="button"
+        style="position:absolute; left:563px;top:320px; height:20px;width:60px;font-family:verdana;font-size:12px;text-align:center;visibility: hidden;"
+        onclick="results();">RESULT
+      </button>
+    </div>
+    </tbody>
+    </table>
+    <p id="iv"
+      style="position:absolute; font-family:verdana;font-size:14px;margin-left:56px; top:400px; visibility:hidden;">
+      Cumulative Infiltration =
+      <input id="res" type="text"
+        style="border:none;border-bottom: 1px solid;width:55px;font-family:verdana;font-size:12px;text-align:center;"
+        autocomplete="off" oninput="checkInputValid(this)"><span id="rightAns" class="resultStyle"></span><input
+        id="chk" type="button" value="CHECK" style="cursor:pointer;margin-left: 5px;" onclick="checkResult();"><span
+        id="alertId">Please
+        Enter Value to proceed</span>
+    </p>
+    <p id="itv" style="position:absolute; left:180px; top:430px; visibility:hidden; border-bottom:double;"></p>
+    <p id="ivi"
+      style="position:absolute;font-family:verdana;font-size:14px; margin-left:56px; top:440px; visibility:hidden;">
+      Average Infiltration =
+      <input id="res1" type="text"
+        style="border:none;border-bottom: 1px solid;width:55px;font-family:verdana;font-size:12px;text-align:center;"
+        autocomplete="off" oninput="checkInputValid(this)"><span id="rightAnswer" class="resultStyle"></span><input
+        id="chks" type="button" value="CHECK" style="cursor:pointer;margin-left: 5px;" onclick="checkResults();"><span
+        id="alertId1">Please
+        Enter Value to proceed</span>
+    </p>
+    <p id="itvi" style="position:absolute; left:180px; top:460px; visibility:hidden; border-bottom:double;"></p>
+    <p id="ivii" style="position:absolute; left:52px; top:400px;font-family:verdana;font-size:14px; visibility:hidden;">
+      Cumulative Infiltration =
+      <input id="res2" type="text"
+        style="border:none;border-bottom: 1px solid;width:55px;font-family:verdana;font-size:12px;text-align:center;"
+        autocomplete="off" oninput="checkInputValid(this)"><span id="rightAnswer1" class="resultStyle"></span><input
+        id="chk1" type="button" value="CHECK" style="cursor:pointer;margin-left: 5px;"
+        onclick="checkResultFinal();"><span id="alertId2">Please
+        Enter Value to proceed</span>
+    </p>
+    <p id="itvii" style="position:absolute; left:180px; top:430px; visibility:hidden; border-bottom:double;"></p>
+    <p id="iviii"
+      style="position:absolute; left:52px; top:440px;font-family:verdana;font-size:14px; visibility:hidden;">Average
+      Infiltration =
+      <input id="res3" type="text"
+        style="border:none;border-bottom: 1px solid;width:55px;font-family:verdana;font-size:12px;text-align:center;"
+        autocomplete="off" oninput="checkInputValid(this)"><span id="rightAnswer2" class="resultStyle"></span><input
+        id="chk2" type="button" value="CHECK" style="cursor:pointer;margin-left: 5px;"
+        onclick="checkResultFinals();"><span id="alertId3">Please
+        Enter Value to proceed</span>
+    </p>
+    <p id="itviii" style="position:absolute; left:180px; top:460px; visibility:hidden; border-bottom:double;"></p>
+
+    <p id="inference"
+      style="position:absolute; font-family:verdana;font-size:14px;margin-left:56px; top:480px; visibility:hidden;">
+      <span style="color:red">Inference</span>:The initial infiltration rate is higher, however as the soil pores
+      get filled with water infiltration
+      rate gradually decreases and reaches steady state.
+    </p>
+
+
+
+
+  </div>
+
+
+
+  <!-- This is the questions division -->
+  <span id="question-div" class="fadeIn">
+    <p id="divq" style="font-family:verdana; font-size:14px;">Both ends of the pipe must be trimmed to ensure parallel
+      faces.</p>
+    <p id="ans"></p>
+  </span>
+  <!-- nextButton -->
+  <div id="nav">
+    <img id="nextButton" onclick="navNext()" src="images/Next.png" />
+
+    <!--Blinking Arrow	-->
+    <img class="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png" />
+
+  </div>
+
+
+  <div id="copyright"> &copy; 2020 -
+    <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of
+    Water Resources & Ocean Engineering
+  </div>
+
+  </div>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+</html>
