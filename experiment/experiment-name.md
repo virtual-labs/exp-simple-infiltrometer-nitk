@@ -1,1 +1,1 @@
-## SINGLE RING INFILTROMETER
+## Infiltration test using simple (tube type) infiltrometer
