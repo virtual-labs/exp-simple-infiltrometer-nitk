@@ -11,7 +11,7 @@
       },
       "explanations": {
         "a": "The rate at which the water enters into soil is called infiltration rate",
-        "b": "The total volume of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration.",
+        "b": "The total volume of water infiltrated into the soil in a given period of time is called accumulated/cumulative infiltration.",
         "c": "The rate at which the water enters into soil is called infiltration rate hence Infiltration rate is correct answer",
         "d": "The rate at which the water enters into soil is called infiltration rate hence Infiltration rate is correct answer"
       },
@@ -30,7 +30,7 @@
         "a": "Maximum amount of water held by the soil against gravity is called field capacity. ",
         "b": "The maximum rate at which water can infiltrate into a soil under a given set of conditions is called infiltration capacity",
         "c": "The total depth of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration.",
-        "d": "As the infiltration process continues the rate of infiltration reduces and eventually reaches steady state is called basic infiltration"
+        "d": "As the infiltration process continues the rate of infiltration reduces and eventually reaches steady state is called basic infiltration."
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
@@ -45,8 +45,8 @@
       },
       "explanations": {
         "a": "The total depth of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration. ",
-        "b": "Maximum amount of water held by the soil against gravity is called field capacity",
-        "c": " The rate at which water enters soil is called infiltration rate. This is initial infiltration.",
+        "b": "Maximum amount of water held by the soil against gravity is called field capacity.",
+        "c": "The rate at which water enters soil is called infiltration rate. This is initial infiltration.",
         "d": "As the infiltration process continues the rate of infiltration reduces and eventually reaches a steady state called basic infiltration."
       },
       "correctAnswer": "a",
@@ -59,32 +59,30 @@
         "a": "Cm",
         "b": "Cm/hr",
         "c": "Days",
-        "d": "Cm3"
+        "d": "cm<sup>3</sup>"
       },
       "explanations": {
-        "a": "unit of accumulated / cumulative infiltration is cm ",
+        "a": "unit of accumulated / cumulative infiltration is cm",
         "b": "Unit of infiltration rate is cm/hr.",
-        "c": " unit of accumulated / cumulative infiltration is not days",
-        "d": "Unit of volume is  Cm3"
+        "c": "Unit of accumulated / cumulative infiltration is not days",
+        "d": "Unit of volume is cm<sup>3</sup>"
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
-
-
     },
     {
-      "question": " which of the flooding type infiltrometer",
+      "question": "Which of the following is NOT a factor that can affect infiltration rate?",
       "answers": {
-        "a": "Single ring infiltrometer",
-        "b": "Double ring infiltrometer",
-        "c": "None of the above",
-        "d": "Both a and b"
+        "a": "Soil type",
+        "b": "Soil moisture content",
+        "c": "Rainfall intensity",
+        "d": "Air temperature"
       },
       "explanations": {
-        "a": "single ring infiltrometer is flooding type infiltrometer ",
-        "b": "Double ring infiltrometer is flooding type infiltrometer",
-        "c": " Both single ring and double ring infiltrometers are floating type infiltrometers",
-        "d": "Both single ring and double ring infiltrometers are floating type infiltrometers"
+        "a": "Affects infiltration rate significantly. Sandy soils have high infiltration rates due to large pores, while clay soils have lower rates because of smaller pores.",
+        "b": "Directly affects infiltration. When soil is already saturated, it cannot absorb much more water, lowering the infiltration rate.",
+        "c": "Also affects infiltration. If rainfall is more intense than the soil's ability to absorb water, excess water will lead to runoff, decreasing effective infiltration.",
+        "d": "Infiltration rate refers to the speed at which water enters the soil surface. Several factors influence this rate: a) Soil type - Affects infiltration rate significantly. Sandy soils have high infiltration rates due to large pores, while clay soils have lower rates because of smaller pores. Soil moisture content - Directly affects infiltration. When soil is already saturated, it cannot absorb much more water, lowering the infiltration rate. Rainfall intensity - Also affects infiltration. If rainfall is more intense than the soil's ability to absorb water, excess water will lead to runoff, decreasing effective infiltration. Air temperature: Does not significantly affect infiltration rate directly. While temperature can influence other processes like evaporation or plant activity, its direct impact on how fast water moves into soil is minimal. So, air temperature is the least relevant factor and does not directly influence infiltration rate, making it the correct answer."
       },
       "correctAnswer": "d",
       "difficulty": "advanced"

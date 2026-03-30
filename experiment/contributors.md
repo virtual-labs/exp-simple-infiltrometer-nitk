@@ -12,5 +12,6 @@
 | :--: | :-------------: | :-------: |
 |  1   | Siya Sushil     |   NITK    |
 |  2   | Sushamita Vadde  |   NITK    |
-|  3   | Nishali M Poojari |   NITK    |
+|  3   | Dr Vyshali |   NITK    |
+|  4  | Nishali M Poojari |   NITK    |
 

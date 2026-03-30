@@ -1,16 +1,31 @@
-Infiltration is the process of flow of water from the soil surface into the ground. Further the movement of water into subsurface soil is called percolation. Infiltration followed by percolation recharge the groundwater which eventually reaches the streamflow. The rate at which the water enters into soil is called infiltration rate. The measurement of infiltration rate is important in problems including runoff, irrigation, seepage, soil erosion, leaching, drainage and various others. Hence the measurement of the infiltration rate is of utmost importance .The infiltration can be measured by flooding type infiltrometers. Flooding type infiltrometer experiment is an in situ experiment carried out using infiltrometers to observe the rate at which water enters into soil at various intervals of time. There are two types of infiltrometer a) simple or tube type infiltrometer and b) double-ring infiltrometer.
+### INTRODUCTION<br>
 
-The tube type infiltrometer is commonly called a “single-ring infiltrometer”.Single ring infiltrometer is a metallic ring driven into ground up to a certain depth and filled with water till the marked level. The reduction in water level and change in volume of water is noted down. The reduced water level is brought to initial level by adding additional water in order to measure the rate of change of water depth with time. The experiment is continued till the infiltration reaches a steady state condition.Although the double ring infiltrometer is used widely to estimate the infiltration rate, the single ring infiltrometer is also well accepted by many hydrologists. One major drawback of a single ring is the unfiltered water spreads outwards from the tube. The total volume of water infiltrated into the soil in a given period of time is called accumulated/ cumulative infiltration . The unit is mm or cm. The average infiltration rate is the fraction of accumulated infiltration depth divided by the total time of infiltration. And the unit is cm/hr, mm/min, mm/hr.
+<p style="text-indent:50px; text-align: justify;">Infiltration is the process by which water flows from the soil surface into the ground, while the subsequent movement of water through the subsurface soil is termed percolation. Infiltration followed by percolation contributes to groundwater recharge, which ultimately supports streamflow.</p>
 
-Horton’s equation is a commonly used empirical equation to calculate the infiltration capacity of soil.
+<p style="text-indent:50px; text-align: justify;">The rate at which water enters the soil is known as the infiltration rate. Measurement of the infiltration rate is essential in various applications, including runoff estimation, irrigation planning, seepage analysis, soil erosion control, leaching, and drainage. Hence, accurate determination of infiltration rate is of considerable importance.</p>
 
+<p style="text-indent:50px; text-align: justify;">Infiltration can be measured using flooding-type infiltrometers. The flooding-type infiltrometer experiment is an in-situ method conducted to observe the rate at which water enters the soil at different time intervals. Infiltrometers are broadly classified into two types: </p>
+
+1. Simple or tube-type infiltrometer
+2. double-ring infiltrometer.
+
+<p style="text-indent:50px; text-align: justify;">
+The tube-type infiltrometer is commonly referred to as a single-ring infiltrometer. It consists of a metallic ring driven into the ground to a specified depth and filled with water up to a marked level. The reduction in water level and the corresponding change in volume are recorded over time. To maintain consistent conditions, the water level is restored to its initial mark by adding water, allowing measurement of the rate of change of water depth with time. The experiment is continued until a steady-state infiltration condition is achieved.</p>
+
+<p style="text-indent:50px; text-align: justify;">Although the double-ring infiltrometer is more widely used for estimating infiltration rates, the single-ring infiltrometer is also accepted by many hydrologists. However, a major limitation of the single-ring method is that water tends to spread laterally from the ring, leading to less accurate results.</p>
+
+<p style="text-indent:50px; text-align: justify;">The total volume of water that infiltrates into the soil over a given period is termed cumulative (or accumulated) infiltration, and it is expressed in units of depth such as mm or cm. The average infiltration rate is defined as the ratio of cumulative infiltration depth to the total time of infiltration, and it is commonly expressed in units such as cm/hr, mm/min, or mm/hr.</p>
+
+Horton's equation is a widely used empirical equation for estimating the infiltration capacity of soil.
+
+Horton's equation for infiltration capacity is expressed as:
 <center>
-fp =fc + (fo-fc) e<sup>-kt</sup> ......................(1)  
+f<sub>p</sub> = f<sub>c</sub> + (f<sub>o</sub> - f<sub>c</sub>) e<sup>-kt</sup>   
 </center>
-Where,
-fp= the infiltration capacity at some time t(depth/time)
 
-k = a Horton’s decay coefficient constant representing the rate of decrease in f capacity.
-fc = a final steady state infiltration capacity  
-t=tc  
-fo = the initial infiltration capacity at t=0
+Where,
+    f<sub>p</sub>= infiltration capacity at time t (depth per unit time),
+    k = Horton’s decay coefficient, representing the rate of decrease in infiltration capacity,
+    f<sub>c</sub> = final steady-state infiltration capacity,   
+    f<sub>o</sub> = initial infiltration capacity at t=0,
+    t = time (often denoted as t<sub>c</sub> in specific contexts)

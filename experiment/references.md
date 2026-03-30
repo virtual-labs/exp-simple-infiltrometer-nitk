@@ -13,6 +13,7 @@
     <ul style="list-style-type: none;">
     <li>Siya Sushil | NITK</li>
     <li>Sushamita Vadde | NITK</li>
+    <li>Dr. Vyshali | NITK</li>
     <li>Nishali M Poojari | NITK</li>
     </ul></td>
   </tr>
