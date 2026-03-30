@@ -24,8 +24,8 @@ f<sub>p</sub> = f<sub>c</sub> + (f<sub>o</sub> - f<sub>c</sub>) e<sup>-kt</sup>
 </center>
 
 Where,
-    f<sub>p</sub>= infiltration capacity at time t (depth per unit time),
-    k = Horton’s decay coefficient, representing the rate of decrease in infiltration capacity,
-    f<sub>c</sub> = final steady-state infiltration capacity,   
-    f<sub>o</sub> = initial infiltration capacity at t=0,
+    f<sub>p</sub>= infiltration capacity at time t (depth per unit time),</br>
+    k = Horton’s decay coefficient, representing the rate of decrease in infiltration capacity,</br>
+    f<sub>c</sub> = final steady-state infiltration capacity,  </br> 
+    f<sub>o</sub> = initial infiltration capacity at t=0,</br>
     t = time (often denoted as t<sub>c</sub> in specific contexts)
