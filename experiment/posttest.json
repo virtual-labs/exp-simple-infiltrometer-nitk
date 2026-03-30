@@ -38,10 +38,10 @@
     {
       "question": "Unit of infiltration rate is",
       "answers": {
-        "a": "Cm",
-        "b": "Cm/hr",
+        "a": "cm",
+        "b": "cm/hr",
         "c": "Days",
-        "d": "Cm3"
+        "d": "cm3"
       },
       "explanations": {
         "a": "The unit of  accumulated infiltration is cm",
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": " Chief disadvantage of flooding type of infiltrometer",
+      "question": "Chief disadvantage of flooding type of infiltrometer",
       "answers": {
         "a": "The raindrop impact is not considered",
         "b": "Driving plate into soil disturbs soil sample",

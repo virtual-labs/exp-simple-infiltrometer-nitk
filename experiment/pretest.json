@@ -56,8 +56,8 @@
     {
       "question": " Unit of accumulated / cumulative infiltration is",
       "answers": {
-        "a": "Cm",
-        "b": "Cm/hr",
+        "a": "cm",
+        "b": "cm/hr",
         "c": "Days",
         "d": "cm<sup>3</sup>"
       },
@@ -82,7 +82,7 @@
         "a": "Affects infiltration rate significantly. Sandy soils have high infiltration rates due to large pores, while clay soils have lower rates because of smaller pores.",
         "b": "Directly affects infiltration. When soil is already saturated, it cannot absorb much more water, lowering the infiltration rate.",
         "c": "Also affects infiltration. If rainfall is more intense than the soil's ability to absorb water, excess water will lead to runoff, decreasing effective infiltration.",
-        "d": "Infiltration rate refers to the speed at which water enters the soil surface. Several factors influence this rate: a) Soil type - Affects infiltration rate significantly. Sandy soils have high infiltration rates due to large pores, while clay soils have lower rates because of smaller pores. Soil moisture content - Directly affects infiltration. When soil is already saturated, it cannot absorb much more water, lowering the infiltration rate. Rainfall intensity - Also affects infiltration. If rainfall is more intense than the soil's ability to absorb water, excess water will lead to runoff, decreasing effective infiltration. Air temperature: Does not significantly affect infiltration rate directly. While temperature can influence other processes like evaporation or plant activity, its direct impact on how fast water moves into soil is minimal. So, air temperature is the least relevant factor and does not directly influence infiltration rate, making it the correct answer."
+        "d": "Infiltration rate refers to the speed at which water enters the soil surface. Several factors influence this rate: a) Soil type - Affects infiltration rate significantly. Sandy soils have high infiltration rates due to large pores, while clay soils have lower rates because of smaller pores. b) Soil moisture content - Directly affects infiltration. When soil is already saturated, it cannot absorb much more water, lowering the infiltration rate. c) Rainfall intensity - Also affects infiltration. If rainfall is more intense than the soil's ability to absorb water, excess water will lead to runoff, decreasing effective infiltration. d) Air temperature - Does not significantly affect infiltration rate directly. While temperature can influence other processes like evaporation or plant activity, its direct impact on how fast water moves into soil is minimal. So, air temperature is the least relevant factor and does not directly influence infiltration rate, making it the correct answer."
       },
       "correctAnswer": "d",
       "difficulty": "advanced"
